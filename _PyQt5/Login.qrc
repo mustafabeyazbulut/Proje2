@@ -1,0 +1,7 @@
+<RCC>
+  <qresource prefix="images">
+    <file>Screenshot_2.png</file>
+    <file>skyolympos_logo_son.png</file>
+  </qresource>
+  <qresource prefix="İmages"/>
+</RCC>
