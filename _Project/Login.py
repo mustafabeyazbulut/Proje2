@@ -9,12 +9,15 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+import sys, LoginRes
 
 
 class Ui_Form(object):
     def setupUi(self, Form):
         Form.setObjectName("Form")
         Form.resize(610, 554)
+        Form.setWindowFlag(QtCore.Qt.FramelessWindowHint)
+        Form.setAttribute(QtCore.Qt.WA_TranslucentBackground)
         self.widget = QtWidgets.QWidget(Form)
         self.widget.setGeometry(QtCore.QRect(30, 30, 550, 500))
         self.widget.setStyleSheet("QPushButton#BtnLogin{\n"
@@ -165,6 +168,10 @@ class Ui_Form(object):
         self.label_8.setStyleSheet("color:rgba(255,255,255,200);")
         self.label_8.setObjectName("label_8")
 
+        self.label.setGraphicsEffect(QtWidgets.QGraphicsDropShadowEffect(blurRadius=25, xOffset=0, yOffset=0))
+        self.label_3.setGraphicsEffect(QtWidgets.QGraphicsDropShadowEffect(blurRadius=25, xOffset=0, yOffset=0))
+        self.BtnLogin.setGraphicsEffect(QtWidgets.QGraphicsDropShadowEffect(blurRadius=25, xOffset=3, yOffset=3))
+
         self.retranslateUi(Form)
         QtCore.QMetaObject.connectSlotsByName(Form)
 
@@ -180,4 +187,12 @@ class Ui_Form(object):
         self.BtnInstagram.setText(_translate("Form", "Q"))
         self.label_8.setText(_translate("Form", "Welcome to the Aircraft\n"
 "Maintenance Control System"))
-import Login_rc
+
+
+if __name__=="__main__":
+    app = QtWidgets.QApplication(sys.argv)
+    Form = QtWidgets.QWidget()
+    ui = Ui_Form()
+    ui.setupUi(Form)
+    Form.show()
+    sys.exit(app.exec_())
