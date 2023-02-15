@@ -70,7 +70,7 @@ class Ui_Form(object):
         self.label.setObjectName("label")
         self.label_2 = QtWidgets.QLabel(self.widget)
         self.label_2.setGeometry(QtCore.QRect(40, 30, 280, 430))
-        self.label_2.setStyleSheet("backgroun-color:rgba(0,0,0,80);\n"
+        self.label_2.setStyleSheet("background-color:rgba(0,0,0,80);\n"
 "border-top-left-radius:50px")
         self.label_2.setText("")
         self.label_2.setObjectName("label_2")
