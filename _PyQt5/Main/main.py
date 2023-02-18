@@ -1,7 +1,7 @@
 import sys
 from home import Ui_MainWindow
 from PyQt5.QtWidgets import *
-from PyQt5.QtCore import pyqtSlot, QFile, QTextStream
+from PyQt5.QtCore import pyqtSlot, QFile, QTextStream, Qt
 
 
 class MainWindow(QMainWindow):
@@ -9,6 +9,7 @@ class MainWindow(QMainWindow):
         super(MainWindow, self).__init__()
 
         self.ui = Ui_MainWindow()
+        self.setWindowFlags(Qt.X11BypassWindowManagerHint) # formun üst kısmını değiştirmek için kullanılıyor
         self.ui.setupUi(self)
         self.ui.profileCont.hide() # profileCont widgeti için butonun checked özelliği açık. başlangıçta hide olmalı
 
