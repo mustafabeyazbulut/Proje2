@@ -93,7 +93,7 @@ border-top-left-radius:50px</string>
     </property>
     <property name="styleSheet">
      <string notr="true">background-color:rgba(0,0,0,80);
-border-top-left-radius:50px</string>
+border-top-left-radius:50px;</string>
     </property>
     <property name="text">
      <string/>

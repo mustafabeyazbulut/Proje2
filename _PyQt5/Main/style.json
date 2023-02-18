@@ -1,0 +1,46 @@
+{
+	"QCustomSlideMenu": [{
+		"name": "profileCont",
+		"defaultSize": [{
+			"width": 100,
+			"height": "animationDuration"
+		}],
+		"collapsedSize": [{
+			"width": 0,
+			"height": 0
+		}],
+		"expandedSize": [{
+			"width": 100,
+			"height": "auto"
+		}],
+		"toggleButton": [{
+			"buttonName": "accountBtn",
+		}],
+		"menuTransitionAnimation": [{
+			"animationDuration": 2000,
+			"animationEasingCurve": "OutBack"
+		}],
+		"menuContainerStyle": [{
+			"whenMenuIsCollapsed": [
+				"border: 2px solid transparent"
+			],
+			"whenMenuIsExpanded": [
+				"border: 2px solid rgb(9, 5, 13); background-color: rgb(9, 5, 13)"
+			]
+		}],
+		"floatPosition": [
+			{
+				"relativeTo": "centralwidget",
+				"position": "top-left",
+				"shadow":[
+					{
+						"color": "#000",
+						"blurRadius": 20,
+						"xOffset": 0,
+						"yOffset": 0
+					}
+				]
+			}
+		]
+	}]
+}
