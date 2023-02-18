@@ -1,6 +1,6 @@
 import sys
 from home import Ui_MainWindow
-from PyQt5.QtWidgets import QMainWindow, QApplication, QWidget, QPushButton, QAction, QLineEdit, QMessageBox, QDesktopWidget
+from PyQt5.QtWidgets import *
 from PyQt5.QtCore import pyqtSlot, QFile, QTextStream
 
 
@@ -11,9 +11,21 @@ class MainWindow(QMainWindow):
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
         self.ui.profileCont.hide() # profileCont widgeti için butonun checked özelliği açık. başlangıçta hide olmalı
-        
-        
-  
+
+
+        self.ui.homeBtn.clicked.connect(self.homeBtn_clicked) # butona tıklandığında change_label fonksiyonunu çalıştır
+        self.ui.maintenanceBtn.clicked.connect(self.maintenanceBtn_clicked) 
+        self.ui.inventoryBtn.clicked.connect(self.inventoryBtn_clicked) 
+        self.ui.aircraftBtn.clicked.connect(self.aircraftBtn_clicked) 
+
+    def homeBtn_clicked(self): # home butonuna tıklandığında çalışacak fonksiyon
+        self.ui.appHeader.setText(self.ui.homeBtn.text()) 
+    def maintenanceBtn_clicked(self): # maintenance butonuna tıklandığında çalışacak fonksiyon
+        self.ui.appHeader.setText(self.ui.maintenanceBtn.text())
+    def inventoryBtn_clicked(self): # incentory butonuna tıklandığında çalışacak fonksiyon
+        self.ui.appHeader.setText(self.ui.inventoryBtn.text()) 
+    def aircraftBtn_clicked(self): # incentory butonuna tıklandığında çalışacak fonksiyon
+        self.ui.appHeader.setText(self.ui.aircraftBtn.text()) 
     
 
 
