@@ -25,11 +25,27 @@
   <property name="tabletTracking">
    <bool>false</bool>
   </property>
+  <property name="contextMenuPolicy">
+   <enum>Qt::DefaultContextMenu</enum>
+  </property>
   <property name="acceptDrops">
    <bool>false</bool>
   </property>
   <property name="windowTitle">
    <string notr="true">Aircraft Maintenance Control System</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="home.qrc">
+    <normaloff>:/logo/skyolympos_logo_son.png</normaloff>:/logo/skyolympos_logo_son.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <property name="toolButtonStyle">
+   <enum>Qt::ToolButtonIconOnly</enum>
+  </property>
+  <property name="animated">
+   <bool>true</bool>
   </property>
   <property name="unifiedTitleAndToolBarOnMac">
    <bool>false</bool>
@@ -40,6 +56,7 @@
 	color: #000;
 	border: none;
 }
+
 #mainFrame{
 	background-color: #fefeff;
 }
@@ -517,7 +534,7 @@ QPushButton:checked{
                 </font>
                </property>
                <property name="text">
-                <string>Overview</string>
+                <string>Home</string>
                </property>
                <property name="textFormat">
                 <enum>Qt::AutoText</enum>
@@ -641,7 +658,7 @@ QPushButton:checked{
                 <bool>true</bool>
                </property>
                <property name="checked">
-                <bool>false</bool>
+                <bool>true</bool>
                </property>
                <property name="autoExclusive">
                 <bool>true</bool>
