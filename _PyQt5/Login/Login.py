@@ -9,26 +9,25 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-import sys, LoginRes
 
 
 class Ui_Form(object):
     def setupUi(self, Form):
         Form.setObjectName("Form")
-        Form.resize(610, 554)
+        Form.resize(619, 556)
+        self.widget = QtWidgets.QWidget(Form)
         Form.setWindowFlag(QtCore.Qt.FramelessWindowHint)
         Form.setAttribute(QtCore.Qt.WA_TranslucentBackground)
-        self.widget = QtWidgets.QWidget(Form)
         self.widget.setGeometry(QtCore.QRect(30, 30, 550, 500))
-        self.widget.setStyleSheet("QPushButton#BtnLogin{\n"
+        self.widget.setStyleSheet("QPushButton#loginBtn{\n"
 "    background-color: qlineargradient(spread:pad, x1:0, y1:0.505682, x2:1, y2:0.477, stop:0 rgba(11,131,120,219),stop:1 rgba(85,98,112,226));\n"
 "    color:rgba(255,255,255,210);\n"
 "    border-radius:5px;\n"
 "}\n"
-"QPushButton#BtnLogin:hover{\n"
+"QPushButton#loginBtn:hover{\n"
 "background-color: qlineargradient(spread:pad, x1:0, y1:0.505682, x2:1, y2:0.477, stop:0 rgba(150,123,111,219),stop:1 rgba(85,81,84,226));\n"
 "}\n"
-"QPushButton#BtnLogin:pressed{\n"
+"QPushButton#loginBtn:pressed{\n"
 "padding-left:5px;\n"
 "padding-top:5px;\n"
 "background-color:rgba(150,123,111,255)\n"
@@ -36,27 +35,40 @@ class Ui_Form(object):
 "\n"
 "\n"
 "\n"
-"QPushButton#BtnTwitter{\n"
+"QPushButton#twitterBtn{\n"
 "    background-color:  rgba(0,0,0,0);\n"
 "    color:rgba(85,98,112,255);\n"
 "}\n"
-"QPushButton#BtnTwitter:hover{\n"
+"QPushButton#twitterBtn:hover{\n"
 "color: rgba(131,96,53,255);\n"
 "}\n"
-"QPushButton#BtnTwitter:pressed{\n"
+"QPushButton#twitterBtn:pressed{\n"
 "padding-left:5px;\n"
 "padding-top:5px;\n"
 "color:rgba(91,88,53,255)\n"
 "}\n"
 "\n"
-"QPushButton#BtnInstagram{\n"
+"QPushButton#instagramBtn{\n"
 "    background-color:  rgba(0,0,0,0);\n"
 "    color:rgba(85,98,112,255);\n"
 "}\n"
-"QPushButton#BtnInstagram:hover{\n"
+"QPushButton#instagramBtn:hover{\n"
 "color: rgba(131,96,53,255);\n"
 "}\n"
-"QPushButton#BtnInstagram:pressed{\n"
+"QPushButton#instagramBtn:pressed{\n"
+"padding-left:5px;\n"
+"padding-top:5px;\n"
+"color:rgba(91,88,53,255)\n"
+"}\n"
+"\n"
+"QPushButton#closeBtn{\n"
+"    background-color:  rgba(0,0,0,0);\n"
+"    color:rgba(85,98,112,255);\n"
+"}\n"
+"QPushButton#closeBtn:hover{\n"
+"color: rgba(131,96,53,255);\n"
+"}\n"
+"QPushButton#closeBtn:pressed{\n"
 "padding-left:5px;\n"
 "padding-top:5px;\n"
 "color:rgba(91,88,53,255)\n"
@@ -71,7 +83,7 @@ class Ui_Form(object):
         self.label_2 = QtWidgets.QLabel(self.widget)
         self.label_2.setGeometry(QtCore.QRect(40, 30, 280, 430))
         self.label_2.setStyleSheet("background-color:rgba(0,0,0,80);\n"
-"border-top-left-radius:50px")
+"border-top-left-radius:50px;")
         self.label_2.setText("")
         self.label_2.setObjectName("label_2")
         self.label_3 = QtWidgets.QLabel(self.widget)
@@ -89,41 +101,41 @@ class Ui_Form(object):
         self.label_4.setFont(font)
         self.label_4.setStyleSheet("color:rgba(0,0,0,200);")
         self.label_4.setObjectName("label_4")
-        self.txtUserName = QtWidgets.QLineEdit(self.widget)
-        self.txtUserName.setGeometry(QtCore.QRect(295, 150, 190, 37))
+        self.userNameTxt = QtWidgets.QLineEdit(self.widget)
+        self.userNameTxt.setGeometry(QtCore.QRect(295, 150, 190, 37))
         font = QtGui.QFont()
         font.setPointSize(9)
-        self.txtUserName.setFont(font)
-        self.txtUserName.setStyleSheet("background-color:rgba(0,0,0,0);\n"
+        self.userNameTxt.setFont(font)
+        self.userNameTxt.setStyleSheet("background-color:rgba(0,0,0,0);\n"
 "border:none;\n"
 "border-bottom:2px solid rgba(46,82,101,200);\n"
 "color:rgba(0,0,0,240);\n"
 "padding-bottom:7px;")
-        self.txtUserName.setObjectName("txtUserName")
-        self.txtPassword = QtWidgets.QLineEdit(self.widget)
-        self.txtPassword.setGeometry(QtCore.QRect(295, 215, 190, 37))
+        self.userNameTxt.setObjectName("userNameTxt")
+        self.passwordTxt = QtWidgets.QLineEdit(self.widget)
+        self.passwordTxt.setGeometry(QtCore.QRect(295, 215, 190, 37))
         font = QtGui.QFont()
         font.setPointSize(9)
-        self.txtPassword.setFont(font)
-        self.txtPassword.setStyleSheet("background-color:rgba(0,0,0,0);\n"
+        self.passwordTxt.setFont(font)
+        self.passwordTxt.setStyleSheet("background-color:rgba(0,0,0,0);\n"
 "border:none;\n"
 "border-bottom:2px solid rgba(46,82,101,200);\n"
 "color:rgba(0,0,0,240);\n"
 "padding-bottom:7px;")
-        self.txtPassword.setEchoMode(QtWidgets.QLineEdit.Password)
-        self.txtPassword.setObjectName("txtPassword")
-        self.BtnLogin = QtWidgets.QPushButton(self.widget)
-        self.BtnLogin.setGeometry(QtCore.QRect(295, 295, 190, 40))
+        self.passwordTxt.setEchoMode(QtWidgets.QLineEdit.Password)
+        self.passwordTxt.setObjectName("passwordTxt")
+        self.loginBtn = QtWidgets.QPushButton(self.widget)
+        self.loginBtn.setGeometry(QtCore.QRect(295, 295, 190, 40))
         font = QtGui.QFont()
         font.setPointSize(11)
         font.setBold(True)
         font.setWeight(75)
-        self.BtnLogin.setFont(font)
-        self.BtnLogin.setObjectName("BtnLogin")
-        self.label_5 = QtWidgets.QLabel(self.widget)
-        self.label_5.setGeometry(QtCore.QRect(300, 350, 181, 16))
-        self.label_5.setStyleSheet("color:rgba(0,0,0,210);")
-        self.label_5.setObjectName("label_5")
+        self.loginBtn.setFont(font)
+        self.loginBtn.setObjectName("loginBtn")
+        self.forgotLbl = QtWidgets.QLabel(self.widget)
+        self.forgotLbl.setGeometry(QtCore.QRect(300, 350, 181, 16))
+        self.forgotLbl.setStyleSheet("color:rgba(0,0,0,210);")
+        self.forgotLbl.setObjectName("forgotLbl")
         self.horizontalLayoutWidget = QtWidgets.QWidget(self.widget)
         self.horizontalLayoutWidget.setGeometry(QtCore.QRect(320, 380, 131, 31))
         self.horizontalLayoutWidget.setObjectName("horizontalLayoutWidget")
@@ -131,65 +143,86 @@ class Ui_Form(object):
         self.horizontalLayout.setContentsMargins(0, 0, 0, 0)
         self.horizontalLayout.setSpacing(0)
         self.horizontalLayout.setObjectName("horizontalLayout")
-        self.BtnTwitter = QtWidgets.QPushButton(self.horizontalLayoutWidget)
-        self.BtnTwitter.setMaximumSize(QtCore.QSize(30, 30))
+        self.twitterBtn = QtWidgets.QPushButton(self.horizontalLayoutWidget)
+        self.twitterBtn.setMaximumSize(QtCore.QSize(30, 30))
         font = QtGui.QFont()
         font.setFamily("Social Media Circled")
         font.setPointSize(15)
-        self.BtnTwitter.setFont(font)
-        self.BtnTwitter.setObjectName("BtnTwitter")
-        self.horizontalLayout.addWidget(self.BtnTwitter)
-        self.BtnInstagram = QtWidgets.QPushButton(self.horizontalLayoutWidget)
-        self.BtnInstagram.setMaximumSize(QtCore.QSize(30, 30))
+        self.twitterBtn.setFont(font)
+        self.twitterBtn.setText("")
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap(":/İmages/black-icon/twitter.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.twitterBtn.setIcon(icon)
+        self.twitterBtn.setObjectName("twitterBtn")
+        self.horizontalLayout.addWidget(self.twitterBtn)
+        self.instagramBtn = QtWidgets.QPushButton(self.horizontalLayoutWidget)
+        self.instagramBtn.setMaximumSize(QtCore.QSize(30, 30))
         font = QtGui.QFont()
         font.setFamily("Social Media Circled")
         font.setPointSize(15)
-        self.BtnInstagram.setFont(font)
-        self.BtnInstagram.setObjectName("BtnInstagram")
-        self.horizontalLayout.addWidget(self.BtnInstagram)
+        self.instagramBtn.setFont(font)
+        self.instagramBtn.setText("")
+        icon1 = QtGui.QIcon()
+        icon1.addPixmap(QtGui.QPixmap(":/İmages/black-icon/instagram.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.instagramBtn.setIcon(icon1)
+        self.instagramBtn.setObjectName("instagramBtn")
+        self.horizontalLayout.addWidget(self.instagramBtn)
         self.label_6 = QtWidgets.QLabel(self.widget)
         self.label_6.setGeometry(QtCore.QRect(40, 80, 230, 141))
         self.label_6.setStyleSheet("background-color:rgba(0,0,0,75);")
         self.label_6.setText("")
         self.label_6.setObjectName("label_6")
-        self.label_7 = QtWidgets.QLabel(self.widget)
-        self.label_7.setGeometry(QtCore.QRect(40, 80, 231, 51))
-        self.label_7.setStyleSheet("border-image: url(:/images/skyolympos_logo_son.png);\n"
+        self.logoLbl = QtWidgets.QLabel(self.widget)
+        self.logoLbl.setGeometry(QtCore.QRect(40, 80, 231, 51))
+        self.logoLbl.setStyleSheet("border-image: url(:/images/skyolympos_logo_son.png);\n"
 "border-top-left-radius:50px")
-        self.label_7.setText("")
-        self.label_7.setObjectName("label_7")
-        self.label_8 = QtWidgets.QLabel(self.widget)
-        self.label_8.setGeometry(QtCore.QRect(50, 145, 220, 50))
+        self.logoLbl.setText("")
+        self.logoLbl.setObjectName("logoLbl")
+        self.welcomeLbl = QtWidgets.QLabel(self.widget)
+        self.welcomeLbl.setGeometry(QtCore.QRect(50, 145, 220, 50))
         font = QtGui.QFont()
         font.setPointSize(10)
         font.setBold(True)
         font.setWeight(75)
-        self.label_8.setFont(font)
-        self.label_8.setStyleSheet("color:rgba(255,255,255,200);")
-        self.label_8.setObjectName("label_8")
+        self.welcomeLbl.setFont(font)
+        self.welcomeLbl.setStyleSheet("color:rgba(255,255,255,200);")
+        self.welcomeLbl.setObjectName("welcomeLbl")
+        self.closeBtn = QtWidgets.QPushButton(self.widget)
+        self.closeBtn.setGeometry(QtCore.QRect(470, 40, 30, 29))
+        self.closeBtn.setMaximumSize(QtCore.QSize(30, 30))
+        font = QtGui.QFont()
+        font.setFamily("Social Media Circled")
+        font.setPointSize(15)
+        self.closeBtn.setFont(font)
+        self.closeBtn.setText("")
+        icon2 = QtGui.QIcon()
+        icon2.addPixmap(QtGui.QPixmap(":/İmages/black-icon/x.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.closeBtn.setIcon(icon2)
+        self.closeBtn.setObjectName("closeBtn")
 
         self.label.setGraphicsEffect(QtWidgets.QGraphicsDropShadowEffect(blurRadius=25, xOffset=0, yOffset=0))
         self.label_3.setGraphicsEffect(QtWidgets.QGraphicsDropShadowEffect(blurRadius=25, xOffset=0, yOffset=0))
-        self.BtnLogin.setGraphicsEffect(QtWidgets.QGraphicsDropShadowEffect(blurRadius=25, xOffset=3, yOffset=3))
+        self.loginBtn.setGraphicsEffect(QtWidgets.QGraphicsDropShadowEffect(blurRadius=25, xOffset=3, yOffset=3))
 
         self.retranslateUi(Form)
+        self.closeBtn.clicked.connect(Form.close)
         QtCore.QMetaObject.connectSlotsByName(Form)
 
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
         Form.setWindowTitle(_translate("Form", "Form"))
         self.label_4.setText(_translate("Form", "Log In"))
-        self.txtUserName.setPlaceholderText(_translate("Form", " User Name"))
-        self.txtPassword.setPlaceholderText(_translate("Form", " Password"))
-        self.BtnLogin.setText(_translate("Form", "Log In"))
-        self.label_5.setText(_translate("Form", "Forgot your User Name or password?"))
-        self.BtnTwitter.setText(_translate("Form", "D"))
-        self.BtnInstagram.setText(_translate("Form", "Q"))
-        self.label_8.setText(_translate("Form", "Welcome to the Aircraft\n"
+        self.userNameTxt.setPlaceholderText(_translate("Form", " User Name"))
+        self.passwordTxt.setPlaceholderText(_translate("Form", " Password"))
+        self.loginBtn.setText(_translate("Form", "Log In"))
+        self.forgotLbl.setText(_translate("Form", "Forgot your User Name or password?"))
+        self.welcomeLbl.setText(_translate("Form", "Welcome to the Aircraft\n"
 "Maintenance Control System"))
+import Login_rc
 
 
-if __name__=="__main__":
+if __name__ == "__main__":
+    import sys
     app = QtWidgets.QApplication(sys.argv)
     Form = QtWidgets.QWidget()
     ui = Ui_Form()

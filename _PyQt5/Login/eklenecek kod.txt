@@ -1,0 +1,10 @@
+19.satır        
+Form.setWindowFlag(QtCore.Qt.FramelessWindowHint)
+Form.setAttribute(QtCore.Qt.WA_TranslucentBackground)
+
+
+203. satır
+
+self.label.setGraphicsEffect(QtWidgets.QGraphicsDropShadowEffect(blurRadius=25, xOffset=0, yOffset=0))
+self.label_3.setGraphicsEffect(QtWidgets.QGraphicsDropShadowEffect(blurRadius=25, xOffset=0, yOffset=0))
+self.BtnLogin.setGraphicsEffect(QtWidgets.QGraphicsDropShadowEffect(blurRadius=25, xOffset=3, yOffset=3))

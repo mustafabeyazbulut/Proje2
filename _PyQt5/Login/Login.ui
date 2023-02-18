@@ -23,15 +23,15 @@
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">QPushButton#BtnLogin{
+    <string notr="true">QPushButton#loginBtn{
 	background-color: qlineargradient(spread:pad, x1:0, y1:0.505682, x2:1, y2:0.477, stop:0 rgba(11,131,120,219),stop:1 rgba(85,98,112,226));
 	color:rgba(255,255,255,210);
 	border-radius:5px;
 }
-QPushButton#BtnLogin:hover{
+QPushButton#loginBtn:hover{
 background-color: qlineargradient(spread:pad, x1:0, y1:0.505682, x2:1, y2:0.477, stop:0 rgba(150,123,111,219),stop:1 rgba(85,81,84,226));
 }
-QPushButton#BtnLogin:pressed{
+QPushButton#loginBtn:pressed{
 padding-left:5px;
 padding-top:5px;
 background-color:rgba(150,123,111,255)
@@ -39,27 +39,40 @@ background-color:rgba(150,123,111,255)
 
 
 
-QPushButton#BtnTwitter{
+QPushButton#twitterBtn{
 	background-color:  rgba(0,0,0,0);
 	color:rgba(85,98,112,255);
 }
-QPushButton#BtnTwitter:hover{
+QPushButton#twitterBtn:hover{
 color: rgba(131,96,53,255);
 }
-QPushButton#BtnTwitter:pressed{
+QPushButton#twitterBtn:pressed{
 padding-left:5px;
 padding-top:5px;
 color:rgba(91,88,53,255)
 }
 
-QPushButton#BtnInstagram{
+QPushButton#instagramBtn{
 	background-color:  rgba(0,0,0,0);
 	color:rgba(85,98,112,255);
 }
-QPushButton#BtnInstagram:hover{
+QPushButton#instagramBtn:hover{
 color: rgba(131,96,53,255);
 }
-QPushButton#BtnInstagram:pressed{
+QPushButton#instagramBtn:pressed{
+padding-left:5px;
+padding-top:5px;
+color:rgba(91,88,53,255)
+}
+
+QPushButton#closeBtn{
+	background-color:  rgba(0,0,0,0);
+	color:rgba(85,98,112,255);
+}
+QPushButton#closeBtn:hover{
+color: rgba(131,96,53,255);
+}
+QPushButton#closeBtn:pressed{
 padding-left:5px;
 padding-top:5px;
 color:rgba(91,88,53,255)
@@ -139,7 +152,7 @@ border-bottom-right-radius:50px</string>
      <string>Log In</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="txtUserName">
+   <widget class="QLineEdit" name="userNameTxt">
     <property name="geometry">
      <rect>
       <x>295</x>
@@ -164,7 +177,7 @@ padding-bottom:7px;</string>
      <string> User Name</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="txtPassword">
+   <widget class="QLineEdit" name="passwordTxt">
     <property name="geometry">
      <rect>
       <x>295</x>
@@ -192,7 +205,7 @@ padding-bottom:7px;</string>
      <string> Password</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="BtnLogin">
+   <widget class="QPushButton" name="loginBtn">
     <property name="geometry">
      <rect>
       <x>295</x>
@@ -212,7 +225,7 @@ padding-bottom:7px;</string>
      <string>Log In</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_5">
+   <widget class="QLabel" name="forgotLbl">
     <property name="geometry">
      <rect>
       <x>300</x>
@@ -242,7 +255,7 @@ padding-bottom:7px;</string>
       <number>0</number>
      </property>
      <item>
-      <widget class="QPushButton" name="BtnTwitter">
+      <widget class="QPushButton" name="twitterBtn">
        <property name="maximumSize">
         <size>
          <width>30</width>
@@ -256,12 +269,16 @@ padding-bottom:7px;</string>
         </font>
        </property>
        <property name="text">
-        <string>D</string>
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="Login.qrc">
+         <normaloff>:/İmages/black-icon/twitter.svg</normaloff>:/İmages/black-icon/twitter.svg</iconset>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="BtnInstagram">
+      <widget class="QPushButton" name="instagramBtn">
        <property name="maximumSize">
         <size>
          <width>30</width>
@@ -275,7 +292,11 @@ padding-bottom:7px;</string>
         </font>
        </property>
        <property name="text">
-        <string>Q</string>
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="Login.qrc">
+         <normaloff>:/İmages/black-icon/instagram.svg</normaloff>:/İmages/black-icon/instagram.svg</iconset>
        </property>
       </widget>
      </item>
@@ -297,7 +318,7 @@ padding-bottom:7px;</string>
      <string/>
     </property>
    </widget>
-   <widget class="QLabel" name="label_7">
+   <widget class="QLabel" name="logoLbl">
     <property name="geometry">
      <rect>
       <x>40</x>
@@ -314,7 +335,7 @@ border-top-left-radius:50px</string>
      <string/>
     </property>
    </widget>
-   <widget class="QLabel" name="label_8">
+   <widget class="QLabel" name="welcomeLbl">
     <property name="geometry">
      <rect>
       <x>50</x>
@@ -338,10 +359,56 @@ border-top-left-radius:50px</string>
 Maintenance Control System</string>
     </property>
    </widget>
+   <widget class="QPushButton" name="closeBtn">
+    <property name="geometry">
+     <rect>
+      <x>470</x>
+      <y>40</y>
+      <width>30</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>30</width>
+      <height>30</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <family>Social Media Circled</family>
+      <pointsize>15</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset resource="Login.qrc">
+      <normaloff>:/İmages/black-icon/x.svg</normaloff>:/İmages/black-icon/x.svg</iconset>
+    </property>
+   </widget>
   </widget>
  </widget>
  <resources>
   <include location="Login.qrc"/>
  </resources>
- <connections/>
+ <connections>
+  <connection>
+   <sender>closeBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>Form</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>517</x>
+     <y>86</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>309</x>
+     <y>277</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>

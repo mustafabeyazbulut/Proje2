@@ -9,13 +9,12 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-import sys, LoginRes
 
 
 class Ui_Form(object):
     def setupUi(self, Form):
         Form.setObjectName("Form")
-        Form.resize(610, 554)
+        Form.resize(619, 556)
         Form.setWindowFlag(QtCore.Qt.FramelessWindowHint)
         Form.setAttribute(QtCore.Qt.WA_TranslucentBackground)
         self.widget = QtWidgets.QWidget(Form)
@@ -71,7 +70,7 @@ class Ui_Form(object):
         self.label_2 = QtWidgets.QLabel(self.widget)
         self.label_2.setGeometry(QtCore.QRect(40, 30, 280, 430))
         self.label_2.setStyleSheet("background-color:rgba(0,0,0,80);\n"
-"border-top-left-radius:50px")
+"border-top-left-radius:50px;")
         self.label_2.setText("")
         self.label_2.setObjectName("label_2")
         self.label_3 = QtWidgets.QLabel(self.widget)
@@ -137,6 +136,10 @@ class Ui_Form(object):
         font.setFamily("Social Media Circled")
         font.setPointSize(15)
         self.BtnTwitter.setFont(font)
+        self.BtnTwitter.setText("")
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap(":/İmages/black-icon/twitter.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.BtnTwitter.setIcon(icon)
         self.BtnTwitter.setObjectName("BtnTwitter")
         self.horizontalLayout.addWidget(self.BtnTwitter)
         self.BtnInstagram = QtWidgets.QPushButton(self.horizontalLayoutWidget)
@@ -145,6 +148,10 @@ class Ui_Form(object):
         font.setFamily("Social Media Circled")
         font.setPointSize(15)
         self.BtnInstagram.setFont(font)
+        self.BtnInstagram.setText("")
+        icon1 = QtGui.QIcon()
+        icon1.addPixmap(QtGui.QPixmap(":/İmages/black-icon/instagram.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.BtnInstagram.setIcon(icon1)
         self.BtnInstagram.setObjectName("BtnInstagram")
         self.horizontalLayout.addWidget(self.BtnInstagram)
         self.label_6 = QtWidgets.QLabel(self.widget)
@@ -183,13 +190,13 @@ class Ui_Form(object):
         self.txtPassword.setPlaceholderText(_translate("Form", " Password"))
         self.BtnLogin.setText(_translate("Form", "Log In"))
         self.label_5.setText(_translate("Form", "Forgot your User Name or password?"))
-        self.BtnTwitter.setText(_translate("Form", "D"))
-        self.BtnInstagram.setText(_translate("Form", "Q"))
         self.label_8.setText(_translate("Form", "Welcome to the Aircraft\n"
 "Maintenance Control System"))
+import Login_rc
 
 
-if __name__=="__main__":
+if __name__ == "__main__":
+    import sys
     app = QtWidgets.QApplication(sys.argv)
     Form = QtWidgets.QWidget()
     ui = Ui_Form()
