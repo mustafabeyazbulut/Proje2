@@ -295,14 +295,14 @@ QPushButton:checked{
                  <number>0</number>
                 </property>
                 <item>
-                 <widget class="QPushButton" name="homeBtn">
+                 <widget class="QPushButton" name="overviewBtn">
                   <property name="font">
                    <font>
                     <pointsize>10</pointsize>
                    </font>
                   </property>
                   <property name="text">
-                   <string>Home</string>
+                   <string>Overview</string>
                   </property>
                   <property name="icon">
                    <iconset resource="homeUi.qrc">
@@ -549,7 +549,7 @@ QPushButton:checked{
                 </font>
                </property>
                <property name="text">
-                <string>Home</string>
+                <string>---</string>
                </property>
                <property name="textFormat">
                 <enum>Qt::AutoText</enum>
@@ -767,7 +767,7 @@ QPushButton:checked{
           <item alignment="Qt::AlignTop">
            <widget class="QLabel" name="label_4">
             <property name="text">
-             <string>Admin</string>
+             <string>-----</string>
             </property>
             <property name="alignment">
              <set>Qt::AlignCenter</set>

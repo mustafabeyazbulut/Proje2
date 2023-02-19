@@ -11,11 +11,11 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 
-class Ui_Form(object):
-    def setupUi(self, Form):
-        Form.setObjectName("Form")
-        Form.resize(619, 556)
-        self.widget = QtWidgets.QWidget(Form)
+class Ui_LoginWindow(object):
+    def setupUi(self, LoginWindow):
+        LoginWindow.setObjectName("LoginWindow")
+        LoginWindow.resize(619, 556)
+        self.widget = QtWidgets.QWidget(LoginWindow)
         self.widget.setGeometry(QtCore.QRect(30, 30, 550, 500))
         self.widget.setStyleSheet("QPushButton#loginBtn{\n"
 "    background-color: qlineargradient(spread:pad, x1:0, y1:0.505682, x2:1, y2:0.477, stop:0 rgba(11,131,120,219),stop:1 rgba(85,98,112,226));\n"
@@ -226,19 +226,19 @@ class Ui_Form(object):
         self.echoModeBtn.setIcon(icon3)
         self.echoModeBtn.setObjectName("echoModeBtn")
 
-        self.retranslateUi(Form)
-        self.closeBtn.clicked.connect(Form.close)
-        QtCore.QMetaObject.connectSlotsByName(Form)
+        self.retranslateUi(LoginWindow)
+        self.closeBtn.clicked.connect(LoginWindow.close)
+        QtCore.QMetaObject.connectSlotsByName(LoginWindow)
 
-    def retranslateUi(self, Form):
+    def retranslateUi(self, LoginWindow):
         _translate = QtCore.QCoreApplication.translate
-        Form.setWindowTitle(_translate("Form", "Form"))
-        self.label_4.setText(_translate("Form", "Log In"))
-        self.userNameTxt.setPlaceholderText(_translate("Form", " User Name"))
-        self.passwordTxt.setPlaceholderText(_translate("Form", " Password"))
-        self.loginBtn.setText(_translate("Form", "Log In"))
-        self.forgotLbl.setText(_translate("Form", "Forgot your User Name or password?"))
-        self.welcomeLbl.setText(_translate("Form", "Welcome to the Aircraft\n"
+        LoginWindow.setWindowTitle(_translate("LoginWindow", "Form"))
+        self.label_4.setText(_translate("LoginWindow", "Log In"))
+        self.userNameTxt.setPlaceholderText(_translate("LoginWindow", " User Name"))
+        self.passwordTxt.setPlaceholderText(_translate("LoginWindow", " Password"))
+        self.loginBtn.setText(_translate("LoginWindow", "Log In"))
+        self.forgotLbl.setText(_translate("LoginWindow", "Forgot your User Name or password?"))
+        self.welcomeLbl.setText(_translate("LoginWindow", "Welcome to the Aircraft\n"
 "Maintenance Control System"))
 import loginUi_rc
 
@@ -246,8 +246,8 @@ import loginUi_rc
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
-    Form = QtWidgets.QWidget()
-    ui = Ui_Form()
-    ui.setupUi(Form)
-    Form.show()
+    LoginWindow = QtWidgets.QWidget()
+    ui = Ui_LoginWindow()
+    ui.setupUi(LoginWindow)
+    LoginWindow.show()
     sys.exit(app.exec_())
