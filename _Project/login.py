@@ -3,13 +3,17 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 import sys,webbrowser
 
 from loginUi import Ui_LoginWindow
-from home import MainWindow
+
 
 class LoginWindow(QWidget):
+    def mainLoad (self):
+        from home import MainWindow
+        self.mainForm=MainWindow()
+        self.mainForm.show()
+
     def __init__(self, parent=None):
         super(LoginWindow, self).__init__()
         self.loginForm = Ui_LoginWindow()
-        self.mainForm=MainWindow()
         self.loginForm.setupUi(self)
 
         self.setWindowFlag(QtCore.Qt.FramelessWindowHint)
@@ -21,35 +25,25 @@ class LoginWindow(QWidget):
         self.loginForm.loginBtn.clicked.connect(self.loginBtn_clicked)
         self.loginForm.twitterBtn.clicked.connect(self.twitterBtn_clicked)
         self.loginForm.instagramBtn.clicked.connect(self.instagramBtn_clicked)
-        self.loginForm.echoModeBtn.clicked.connect(self.echoModeBtn_clicked)
-        
+
+        self.loginForm.echoModeBtn.pressed.connect(self.echoModeBtn_clicked) # butona basılı tutulduğunda çalışacak fonksiyon
+        self.loginForm.echoModeBtn.released.connect(self.echoModeBtn_clicked) # buton bırakıldığında çalışacak fonksiyon
+
+   
 
     def loginBtn_clicked(self):
         uName=self.loginForm.userNameTxt.text()
         uPassword=self.loginForm.passwordTxt.text()
         if uName=="admin" and uPassword=="admin":
             self.close()
-            self.mainForm.show()
+            self.mainLoad()
     
     def twitterBtn_clicked(self):
         webbrowser.open("https://twitter.com/skyolympos")
     def instagramBtn_clicked(self):
         webbrowser.open("https://www.instagram.com/skyolympos/")
-    def echoModeBtn_clicked(self):
+    def echoModeBtn_clicked(self): #butona basılınca da bırakınca da çalışacak fonksiyon
         if self.loginForm.passwordTxt.echoMode()==2:
             self.loginForm.passwordTxt.setEchoMode(QtWidgets.QLineEdit.Normal)
         else:
             self.loginForm.passwordTxt.setEchoMode(QtWidgets.QLineEdit.Password)
-            
-      
-
-        
-    
-
-"""
-if __name__ == "__main__":
-    app = QApplication(sys.argv)
-    window=LoginWindow()
-    window.show()
-    sys.exit(app.exec_())
-"""
