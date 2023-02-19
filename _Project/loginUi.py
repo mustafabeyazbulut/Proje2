@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'Login.ui'
+# Form implementation generated from reading ui file 'loginUi.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.4
 #
@@ -16,8 +16,6 @@ class Ui_Form(object):
         Form.setObjectName("Form")
         Form.resize(619, 556)
         self.widget = QtWidgets.QWidget(Form)
-        Form.setWindowFlag(QtCore.Qt.FramelessWindowHint)
-        Form.setAttribute(QtCore.Qt.WA_TranslucentBackground)
         self.widget.setGeometry(QtCore.QRect(30, 30, 550, 500))
         self.widget.setStyleSheet("QPushButton#loginBtn{\n"
 "    background-color: qlineargradient(spread:pad, x1:0, y1:0.505682, x2:1, y2:0.477, stop:0 rgba(11,131,120,219),stop:1 rgba(85,98,112,226));\n"
@@ -72,7 +70,23 @@ class Ui_Form(object):
 "padding-left:5px;\n"
 "padding-top:5px;\n"
 "color:rgba(91,88,53,255)\n"
-"}")
+"}\n"
+"\n"
+"\n"
+"QPushButton#echoModeBtn{\n"
+"    background-color:  rgba(0,0,0,0);\n"
+"    color:rgba(85,98,112,255);\n"
+"}\n"
+"QPushButton#echoModeBtn:hover{\n"
+"color: rgba(131,96,53,255);\n"
+"}\n"
+"QPushButton#echoModeBtn:pressed{\n"
+"padding-left:5px;\n"
+"padding-top:5px;\n"
+"color:rgba(91,88,53,255)\n"
+"}\n"
+"\n"
+"")
         self.widget.setObjectName("widget")
         self.label = QtWidgets.QLabel(self.widget)
         self.label.setGeometry(QtCore.QRect(40, 30, 280, 430))
@@ -199,10 +213,18 @@ class Ui_Form(object):
         icon2.addPixmap(QtGui.QPixmap(":/İmages/black-icon/x.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.closeBtn.setIcon(icon2)
         self.closeBtn.setObjectName("closeBtn")
-
-        self.label.setGraphicsEffect(QtWidgets.QGraphicsDropShadowEffect(blurRadius=25, xOffset=0, yOffset=0))
-        self.label_3.setGraphicsEffect(QtWidgets.QGraphicsDropShadowEffect(blurRadius=25, xOffset=0, yOffset=0))
-        self.loginBtn.setGraphicsEffect(QtWidgets.QGraphicsDropShadowEffect(blurRadius=25, xOffset=3, yOffset=3))
+        self.echoModeBtn = QtWidgets.QPushButton(self.widget)
+        self.echoModeBtn.setGeometry(QtCore.QRect(275, 223, 21, 21))
+        self.echoModeBtn.setMaximumSize(QtCore.QSize(30, 30))
+        font = QtGui.QFont()
+        font.setFamily("Social Media Circled")
+        font.setPointSize(15)
+        self.echoModeBtn.setFont(font)
+        self.echoModeBtn.setText("")
+        icon3 = QtGui.QIcon()
+        icon3.addPixmap(QtGui.QPixmap(":/İmages/black-icon/key.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.echoModeBtn.setIcon(icon3)
+        self.echoModeBtn.setObjectName("echoModeBtn")
 
         self.retranslateUi(Form)
         self.closeBtn.clicked.connect(Form.close)
@@ -218,7 +240,7 @@ class Ui_Form(object):
         self.forgotLbl.setText(_translate("Form", "Forgot your User Name or password?"))
         self.welcomeLbl.setText(_translate("Form", "Welcome to the Aircraft\n"
 "Maintenance Control System"))
-import Login_rc
+import loginUi_rc
 
 
 if __name__ == "__main__":

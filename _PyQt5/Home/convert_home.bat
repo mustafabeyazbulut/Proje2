@@ -1,2 +1,4 @@
-pyuic5 -x home.ui -o home.py
-pyrcc5 home.qrc -o home_rc.py
+pyuic5 -x homeUi.ui -o C:\Users\mustafa\Documents\GitHub\Proje2\_Project\homeUi.py
+pyrcc5 homeUi.qrc -o C:\Users\mustafa\Documents\GitHub\Proje2\_Project\homeUi_rc.py
+
+

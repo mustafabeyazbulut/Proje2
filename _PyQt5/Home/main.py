@@ -9,10 +9,10 @@ class MainWindow(QMainWindow):
         super(MainWindow, self).__init__()
 
         self.ui = Ui_MainWindow()
-        self.setWindowFlags(Qt.X11BypassWindowManagerHint) # formun üst kısmını değiştirmek için 
+
         self.ui.setupUi(self)
         self.ui.profileCont.hide() # profileCont widgeti için butonun checked özelliği açık. başlangıçta hide olmalı
-
+        self.setWindowFlags(Qt.X11BypassWindowManagerHint) # formun üst kısmını değiştirmek için 
 
         self.ui.homeBtn.clicked.connect(self.homeBtn_clicked) # butona tıklandığında change_label fonksiyonunu çalıştır
         self.ui.maintenanceBtn.clicked.connect(self.maintenanceBtn_clicked) 

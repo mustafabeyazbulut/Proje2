@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'home.ui'
+# Form implementation generated from reading ui file 'homeUi.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.4
 #
@@ -14,6 +14,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
+        MainWindow.setWindowModality(QtCore.Qt.NonModal)
         MainWindow.setEnabled(True)
         MainWindow.resize(976, 740)
         font = QtGui.QFont()
@@ -28,9 +29,13 @@ class Ui_MainWindow(object):
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap(":/logo/skyolympos_logo_son.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         MainWindow.setWindowIcon(icon)
+        MainWindow.setLayoutDirection(QtCore.Qt.LeftToRight)
+        MainWindow.setAutoFillBackground(False)
         MainWindow.setStyleSheet("")
         MainWindow.setToolButtonStyle(QtCore.Qt.ToolButtonIconOnly)
         MainWindow.setAnimated(True)
+        MainWindow.setTabShape(QtWidgets.QTabWidget.Rounded)
+        MainWindow.setDockNestingEnabled(False)
         MainWindow.setUnifiedTitleAndToolBarOnMac(False)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setStyleSheet("*{\n"
@@ -395,7 +400,7 @@ class Ui_MainWindow(object):
         self.label_4.setText(_translate("MainWindow", "Admin"))
         self.myProfileBtn.setText(_translate("MainWindow", "My Profile"))
         self.logoutBtn.setText(_translate("MainWindow", "Logout"))
-import home_rc
+import homeUi_rc
 
 
 if __name__ == "__main__":

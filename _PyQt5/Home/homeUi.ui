@@ -38,7 +38,7 @@
    <string notr="true">Aircraft Maintenance Control System</string>
   </property>
   <property name="windowIcon">
-   <iconset resource="home.qrc">
+   <iconset resource="homeUi.qrc">
     <normaloff>:/logo/skyolympos_logo_son.png</normaloff>:/logo/skyolympos_logo_son.png</iconset>
   </property>
   <property name="layoutDirection">
@@ -227,7 +227,7 @@ QPushButton:checked{
                 <string/>
                </property>
                <property name="pixmap">
-                <pixmap resource="home.qrc">:/logo/skyolympos_logo_son.png</pixmap>
+                <pixmap resource="homeUi.qrc">:/logo/skyolympos_logo_son.png</pixmap>
                </property>
                <property name="scaledContents">
                 <bool>true</bool>
@@ -305,7 +305,7 @@ QPushButton:checked{
                    <string>Home</string>
                   </property>
                   <property name="icon">
-                   <iconset resource="home.qrc">
+                   <iconset resource="homeUi.qrc">
                     <normaloff>:/whiteIcons/white/home.svg</normaloff>
                     <normalon>:/blueIcons/blue/home.svg</normalon>:/whiteIcons/white/home.svg</iconset>
                   </property>
@@ -340,7 +340,7 @@ QPushButton:checked{
                    <string>Maintenance</string>
                   </property>
                   <property name="icon">
-                   <iconset resource="home.qrc">
+                   <iconset resource="homeUi.qrc">
                     <normaloff>:/whiteIcons/white/settings.svg</normaloff>
                     <normalon>:/blueIcons/blue/settings.svg</normalon>:/whiteIcons/white/settings.svg</iconset>
                   </property>
@@ -369,7 +369,7 @@ QPushButton:checked{
                    <string>Inventory</string>
                   </property>
                   <property name="icon">
-                   <iconset resource="home.qrc">
+                   <iconset resource="homeUi.qrc">
                     <normaloff>:/whiteIcons/white/book-open.svg</normaloff>
                     <normalon>:/blueIcons/blue/book-open.svg</normalon>:/whiteIcons/white/book-open.svg</iconset>
                   </property>
@@ -398,7 +398,7 @@ QPushButton:checked{
                    <string>Aircraft</string>
                   </property>
                   <property name="icon">
-                   <iconset resource="home.qrc">
+                   <iconset resource="homeUi.qrc">
                     <normaloff>:/whiteIcons/white/twitter.svg</normaloff>
                     <normalon>:/blueIcons/blue/twitter.svg</normalon>:/whiteIcons/white/twitter.svg</iconset>
                   </property>
@@ -430,7 +430,7 @@ QPushButton:checked{
                 <string>Close</string>
                </property>
                <property name="icon">
-                <iconset resource="home.qrc">
+                <iconset resource="homeUi.qrc">
                  <normaloff>:/whiteIcons/white/x.svg</normaloff>:/whiteIcons/white/x.svg</iconset>
                </property>
                <property name="iconSize">
@@ -516,7 +516,7 @@ QPushButton:checked{
                 <string/>
                </property>
                <property name="icon">
-                <iconset resource="home.qrc">
+                <iconset resource="homeUi.qrc">
                  <normaloff>:/blueIcons/blue/menu.svg</normaloff>:/blueIcons/blue/menu.svg</iconset>
                </property>
                <property name="iconSize">
@@ -616,7 +616,7 @@ QPushButton:checked{
                    <string/>
                   </property>
                   <property name="pixmap">
-                   <pixmap resource="home.qrc">:/blueIcons/blue/search.svg</pixmap>
+                   <pixmap resource="homeUi.qrc">:/blueIcons/blue/search.svg</pixmap>
                   </property>
                   <property name="scaledContents">
                    <bool>false</bool>
@@ -660,7 +660,7 @@ QPushButton:checked{
                 <string/>
                </property>
                <property name="icon">
-                <iconset resource="home.qrc">
+                <iconset resource="homeUi.qrc">
                  <normaloff>:/blueIcons/blue/users.svg</normaloff>:/blueIcons/blue/users.svg</iconset>
                </property>
                <property name="iconSize">
@@ -792,7 +792,7 @@ QPushButton:checked{
              <string/>
             </property>
             <property name="pixmap">
-             <pixmap resource="home.qrc">:/whiteIcons/white/user.svg</pixmap>
+             <pixmap resource="homeUi.qrc">:/whiteIcons/white/user.svg</pixmap>
             </property>
             <property name="alignment">
              <set>Qt::AlignCenter</set>
@@ -805,7 +805,7 @@ QPushButton:checked{
              <string>My Profile</string>
             </property>
             <property name="icon">
-             <iconset resource="home.qrc">
+             <iconset resource="homeUi.qrc">
               <normaloff>:/whiteIcons/white/user.svg</normaloff>:/whiteIcons/white/user.svg</iconset>
             </property>
            </widget>
@@ -816,7 +816,7 @@ QPushButton:checked{
              <string>Logout</string>
             </property>
             <property name="icon">
-             <iconset resource="home.qrc">
+             <iconset resource="homeUi.qrc">
               <normaloff>:/whiteIcons/white/log-out.svg</normaloff>:/whiteIcons/white/log-out.svg</iconset>
             </property>
            </widget>
@@ -831,7 +831,7 @@ QPushButton:checked{
   </widget>
  </widget>
  <resources>
-  <include location="home.qrc"/>
+  <include location="homeUi.qrc"/>
  </resources>
  <connections>
   <connection>
