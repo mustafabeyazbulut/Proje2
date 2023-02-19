@@ -225,6 +225,11 @@ class Ui_LoginWindow(object):
         icon3.addPixmap(QtGui.QPixmap(":/İmages/black-icon/key.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.echoModeBtn.setIcon(icon3)
         self.echoModeBtn.setObjectName("echoModeBtn")
+        self.errorLbl = QtWidgets.QLabel(self.widget)
+        self.errorLbl.setGeometry(QtCore.QRect(300, 260, 181, 16))
+        self.errorLbl.setStyleSheet("color:rgb(255, 0, 0)")
+        self.errorLbl.setText("")
+        self.errorLbl.setObjectName("errorLbl")
 
         self.retranslateUi(LoginWindow)
         self.closeBtn.clicked.connect(LoginWindow.close)

@@ -433,6 +433,22 @@ Maintenance Control System</string>
       <normaloff>:/İmages/black-icon/key.svg</normaloff>:/İmages/black-icon/key.svg</iconset>
     </property>
    </widget>
+   <widget class="QLabel" name="errorLbl">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>260</y>
+      <width>181</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:rgb(255, 0, 0)</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
   </widget>
  </widget>
  <resources>

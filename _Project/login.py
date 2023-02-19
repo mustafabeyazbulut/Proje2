@@ -37,6 +37,8 @@ class LoginWindow(QWidget):
         if uName=="admin" and uPassword=="admin":
             self.close()
             self.mainLoad()
+        else:
+            self.loginForm.errorLbl.setText("Kullanıcı adı veya şifre hatalı")
     
     def twitterBtn_clicked(self):
         webbrowser.open("https://twitter.com/skyolympos")
