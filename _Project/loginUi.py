@@ -228,6 +228,8 @@ class Ui_LoginWindow(object):
 
         self.retranslateUi(LoginWindow)
         self.closeBtn.clicked.connect(LoginWindow.close)
+        self.userNameTxt.returnPressed.connect(self.passwordTxt.setFocus)
+        self.passwordTxt.returnPressed.connect(self.loginBtn.click)
         QtCore.QMetaObject.connectSlotsByName(LoginWindow)
 
     def retranslateUi(self, LoginWindow):

@@ -1,6 +1,6 @@
 from PyQt5.QtWidgets import *
 from PyQt5 import QtCore, QtGui, QtWidgets
-import sys
+import sys,webbrowser
 
 from loginUi import Ui_LoginWindow
 from home import MainWindow
@@ -19,7 +19,10 @@ class LoginWindow(QWidget):
         self.loginForm.loginBtn.setGraphicsEffect(QtWidgets.QGraphicsDropShadowEffect(blurRadius=25, xOffset=3, yOffset=3))
 
         self.loginForm.loginBtn.clicked.connect(self.loginBtn_clicked)
-
+        self.loginForm.twitterBtn.clicked.connect(self.twitterBtn_clicked)
+        self.loginForm.instagramBtn.clicked.connect(self.instagramBtn_clicked)
+        self.loginForm.echoModeBtn.clicked.connect(self.echoModeBtn_clicked)
+        
 
     def loginBtn_clicked(self):
         uName=self.loginForm.userNameTxt.text()
@@ -27,6 +30,16 @@ class LoginWindow(QWidget):
         if uName=="admin" and uPassword=="admin":
             self.close()
             self.mainForm.show()
+    
+    def twitterBtn_clicked(self):
+        webbrowser.open("https://twitter.com/skyolympos")
+    def instagramBtn_clicked(self):
+        webbrowser.open("https://www.instagram.com/skyolympos/")
+    def echoModeBtn_clicked(self):
+        if self.loginForm.passwordTxt.echoMode()==2:
+            self.loginForm.passwordTxt.setEchoMode(QtWidgets.QLineEdit.Normal)
+        else:
+            self.loginForm.passwordTxt.setEchoMode(QtWidgets.QLineEdit.Password)
             
       
 
