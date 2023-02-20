@@ -52,7 +52,7 @@ class LoginWindow(QWidget):
         webbrowser.open("https://twitter.com/skyolympos")
     def instagramBtn_clicked(self):
         webbrowser.open("https://www.instagram.com/skyolympos/")
-    def echoModeBtn_clicked(self): #butona basılınca da bırakınca da çalışacak fonksiyon
+    def echoModeBtn_clicked(self): #şifreyi göster/gizle butonu
         if self.loginForm.passwordTxt.echoMode()==2:
             self.loginForm.passwordTxt.setEchoMode(QtWidgets.QLineEdit.Normal)
         else:

@@ -1,11 +1,13 @@
 import pymongo
 import Class.userClass as userClass
 
+mongoclient = pymongo.MongoClient("mongodb://localhost:27017/")
+mongodb=mongoclient["AMCS_DB"]
 
 class userCollection:
     def __init__(self):
-        self.client = pymongo.MongoClient("mongodb://localhost:27017/")
-        self.db = self.client["AMCS_DB"]
+        self.client = mongoclient
+        self.db = mongodb
         self.col = self.db["Users_Collection"]
 
     def insert(self, data):
