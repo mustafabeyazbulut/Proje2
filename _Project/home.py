@@ -1,5 +1,6 @@
 import sys
 from homeUi import Ui_MainWindow
+import Class.userClass as userInfo
 
 from PyQt5.QtWidgets import QMainWindow, QApplication
 from PyQt5.QtCore import pyqtSlot, QFile, QTextStream, Qt
@@ -25,6 +26,8 @@ class MainWindow(QMainWindow):
         self.mainForm.aircraftBtn.clicked.connect(self.aircraftBtn_clicked) 
         self.mainForm.logoutBtn.clicked.connect(self.logoutBtn_clicked)
 
+
+        self.mainForm.userNameLbl.setText(userInfo.UserClass.userName) # login formundan gelen kullanıcı adını yazdır
         self.mainForm.overviewBtn.click() # Sayfa açıldığında overview butonuna tıklanmış gibi çalıştır
 
     def overviewBtn_clicked(self): # home butonuna tıklandığında çalışacak fonksiyon
