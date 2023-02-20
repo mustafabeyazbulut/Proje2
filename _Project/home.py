@@ -8,9 +8,9 @@ from PyQt5.QtCore import pyqtSlot, QFile, QTextStream, Qt
 
 class MainWindow(QMainWindow):
     def loginLoad (self):
-        from login import LoginWindow
-        self.loginForm=LoginWindow()
-        self.loginForm.show()
+        from login import LoginWindow # login.py dosyasındaki LoginWindow sınıfını çağır
+        self.loginForm=LoginWindow() 
+        self.loginForm.show() 
 
     def __init__(self, parent=None): # __init__ fonksiyonu, sınıf çağırıldığında çalışan fonksiyondur
         super(MainWindow, self).__init__() # QMainWindow sınıfını çağır
