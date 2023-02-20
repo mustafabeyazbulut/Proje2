@@ -12,19 +12,19 @@ class MainWindow(QMainWindow):
         self.loginForm=LoginWindow()
         self.loginForm.show()
 
-    def __init__(self, parent=None):
-        super(MainWindow, self).__init__()
+    def __init__(self, parent=None): # __init__ fonksiyonu, sınıf çağırıldığında çalışan fonksiyondur
+        super(MainWindow, self).__init__() # QMainWindow sınıfını çağır
 
-        self.mainForm = Ui_MainWindow()
-        self.mainForm.setupUi(self)
+        self.mainForm = Ui_MainWindow() # homeUi.py dosyasındaki Ui_MainWindow sınıfını çağır
+        self.mainForm.setupUi(self) # homeUi.py dosyasındaki setupUi fonksiyonunu çalıştır	
         self.mainForm.profileCont.hide() # profileCont widgeti için butonun checked özelliği açık. başlangıçta hide olmalı
         self.setWindowFlags(Qt.X11BypassWindowManagerHint) # formun üst kısmını değiştirmek için 
 
-        self.mainForm.overviewBtn.clicked.connect(self.overviewBtn_clicked) # butona tıklandığında change_label fonksiyonunu çalıştır
-        self.mainForm.maintenanceBtn.clicked.connect(self.maintenanceBtn_clicked) 
-        self.mainForm.inventoryBtn.clicked.connect(self.inventoryBtn_clicked) 
-        self.mainForm.aircraftBtn.clicked.connect(self.aircraftBtn_clicked) 
-        self.mainForm.logoutBtn.clicked.connect(self.logoutBtn_clicked)
+        self.mainForm.overviewBtn.clicked.connect(self.overviewBtn_clicked) # butona tıklandığında overviewBtn_clicked fonksiyonunu çalıştır
+        self.mainForm.maintenanceBtn.clicked.connect(self.maintenanceBtn_clicked) # butona tıklandığında maintenanceBtn_clicked fonksiyonunu çalıştır
+        self.mainForm.inventoryBtn.clicked.connect(self.inventoryBtn_clicked) # butona tıklandığında inventoryBtn_clicked fonksiyonunu çalıştır
+        self.mainForm.aircraftBtn.clicked.connect(self.aircraftBtn_clicked) # butona tıklandığında aircraftBtn_clicked fonksiyonunu çalıştır
+        self.mainForm.logoutBtn.clicked.connect(self.logoutBtn_clicked) # butona tıklandığında logoutBtn_clicked fonksiyonunu çalıştır
 
 
         self.mainForm.userNameLbl.setText(userClass.store.userName) # login formundan gelen kullanıcı adını yazdır
