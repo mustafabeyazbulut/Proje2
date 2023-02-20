@@ -1,7 +1,7 @@
 from PyQt5.QtWidgets import *
 from PyQt5 import QtCore, QtGui, QtWidgets
 import sys,webbrowser
-import Class.userClass as userInfo
+import Class.userClass as userClass
 
 from loginUi import Ui_LoginWindow
 
@@ -36,8 +36,8 @@ class LoginWindow(QWidget):
         uName=self.loginForm.userNameTxt.text()
         uPass=self.loginForm.passwordTxt.text()
         if uName=="admin" and uPass=="admin":
-            userInfo.UserClass.userName=uName
-            userInfo.UserClass.userPass=uPass
+            userClass.store.userName=uName
+            userClass.store.userPass=uPass
             self.close()
             self.mainLoad()
         else:

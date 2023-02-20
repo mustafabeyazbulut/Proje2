@@ -1,6 +1,13 @@
-class UserClass:
+class store:
     UserName=""
+    UserFullName=""
     UserPass=""
+    UserPhoto=""
+    UserPosition=""
+    UserEmail=""
+    UserDepartment=""
+    UserAuthority=""
+
     
 
     
