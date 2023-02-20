@@ -1,7 +1,10 @@
 from PyQt5.QtWidgets import *
 from PyQt5 import QtCore, QtGui, QtWidgets
-import sys,webbrowser
+import sys, webbrowser,hashlib
+
+
 import Class.userClass as userClass
+import Class.dbClass as dbClass
 
 from loginUi import Ui_LoginWindow
 
@@ -34,14 +37,16 @@ class LoginWindow(QWidget):
 
     def loginBtn_clicked(self):
         uName=self.loginForm.userNameTxt.text()
-        uPass=self.loginForm.passwordTxt.text()
-        if uName=="admin" and uPass=="admin":
-            userClass.store.userName=uName
-            userClass.store.userPass=uPass
-            self.close()
-            self.mainLoad()
-        else:
+        uPass=hashlib.sha256(self.loginForm.passwordTxt.text().encode("utf-8")).hexdigest() # şifre hashlenir
+
+        db=dbClass.userCollection() # dbClass.py içerisindeki userCollection class'ından bir nesne oluşturulur
+        loginControl=db.loginControl(uName, uPass) # loginControl fonksiyonu çağırılır
+        if not loginControl: # dönen bilgi boş ise hata mesajı verilir
             self.loginForm.errorLbl.setText("Kullanıcı adı veya şifre hatalı")
+        else: # dönen bilgi boş değilse giriş başarılıdır
+            self.close()
+            self.mainLoad()  
+
     
     def twitterBtn_clicked(self):
         webbrowser.open("https://twitter.com/skyolympos")

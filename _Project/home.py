@@ -27,7 +27,7 @@ class MainWindow(QMainWindow):
         self.mainForm.logoutBtn.clicked.connect(self.logoutBtn_clicked) # butona tıklandığında logoutBtn_clicked fonksiyonunu çalıştır
 
 
-        self.mainForm.userNameLbl.setText(userClass.store.userName) # login formundan gelen kullanıcı adını yazdır
+        self.mainForm.userNameLbl.setText(userClass.store.UserJson['_FullName']) # login formundan gelen kullanıcı adını yazdır
         self.mainForm.overviewBtn.click() # Sayfa açıldığında overview butonuna tıklanmış gibi çalıştır
 
     def overviewBtn_clicked(self): # home butonuna tıklandığında çalışacak fonksiyon
