@@ -33,8 +33,8 @@ class LoginWindow(QWidget):
 
     def loginBtn_clicked(self):
         uName=self.loginForm.userNameTxt.text()
-        uPassword=self.loginForm.passwordTxt.text()
-        if uName=="admin" and uPassword=="admin":
+        uPass=self.loginForm.passwordTxt.text()
+        if uName=="admin" and uPass=="admin":
             self.close()
             self.mainLoad()
         else:
