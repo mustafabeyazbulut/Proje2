@@ -1,0 +1,10 @@
+MongoDb tools'u yükle
+Gelişmiş sistem ayarları
+ortam değişkenleri
+path'i aç
+Yeni de C:\Program Files\MongoDB\Tools\100  yapıştır
+tamam diyerek kapat
+
+
+mongorestore --db AMCS_DB C:\AMCS_DB
+mongodump --db AMCS_DB

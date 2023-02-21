@@ -39,6 +39,7 @@ class MainWindow(QMainWindow):
     def aircraftBtn_clicked(self): # incentory butonuna tıklandığında çalışacak fonksiyon
         self.mainForm.appHeader.setText(self.mainForm.aircraftBtn.text()) 
     def logoutBtn_clicked(self): # logout butonuna tıklandığında çalışacak fonksiyon
+        userClass.store.UserJson=" "
         self.close() # formu kapat
         self.loginLoad() # login formunu aç
         
